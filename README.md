@@ -7,7 +7,7 @@ Bibliothèque commune pour mes projets Flutter.
 dependencies:
 fl_lib:
 git:
-url: https://github.com/lppcg/fl_lib.git
+url: https://github.com/santana237/fl_lib/
 ref: main
 ```
 
