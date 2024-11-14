@@ -1,42 +1,42 @@
 ## fl_lib
-Common library for the my Flutter projects.
+Bibliothèque commune pour mes projets Flutter.
 
-### Usage
-1. First, add dep.
-   ```yaml
-   dependencies:
-     fl_lib:
-       git:
-         url: https://github.com/lppcg/fl_lib.git
-         ref: main
-   ```
+### Utilisation
+1. Tout d'abord, ajoutez dep.
+```yaml
+dependencies:
+fl_lib:
+git:
+url: https://github.com/lppcg/fl_lib.git
+ref: main
+```
 
-2. Set `localizationsDelegates`
-   ```dart
-   MaterialApp(
-     localizationsDelegates: const [
-       LibLocalizations.delegate,
-       ...AppLocalizations.localizationsDelegates,
-     ],
-     supportedLocales: AppLocalizations.supportedLocales,
-   )
-   ```
+2. Définissez `localizationsDelegates`
+```dart
+MaterialApp(
+localizationsDelegates: const [
+LibLocalizations.delegate,
+...AppLocalizations.localizationsDelegates,
+],
+supportedLocales: AppLocalizations.supportedLocales,
+)
+```
 
-3. Update lib l10n
-   ```dart
-   void didChangeDependencies() {
-     super.didChangeDependencies();
-     context.setLibL10n();
-   }
-   ```
+3. Mettez à jour la bibliothèque l10n
+```dart
+void didChangeDependencies() {
+super.didChangeDependencies();
+context.setLibL10n();
+}
+```
 
 4. Init `Paths`
-   ```dart
-   void main() async {
-     await Paths.init();
-     runApp(MyApp());
-   }
-   ```
+```dart
+void main() async {
+await Paths.init();
+runApp(MyApp());
+}
+```
 
 ### Attention
-Remember to run `./export_all.dart` after changing any file in this library.
+N'oubliez pas d'exécuter `./export_all.dart` après avoir modifié un fichier dans cette bibliothèque.
